@@ -1,0 +1,33 @@
+---
+import PricingCard from "./PricingCard.astro";
+---
+
+<section>
+    <p class="heading">COMIENZA AHORA</p>
+    <h3 class="section-title">¡Elige la opción que te llevará directo a tu licencia!</h3>
+    <PricingCard />
+</section>
+
+<style>
+
+    section{
+        margin-top: 10rem;
+        text-align: center;
+    }
+    .heading {
+        font-size: 1.4rem;
+        color: var(--primary);
+        font-weight: 700;
+    }
+    .section-title {
+        font-size: 3.6rem;
+        font-weight: 600;
+        margin-top: 1rem;
+    }
+    .section-paragraph {
+        font-size: 1.6rem;
+        color: var(--dark-light-text);
+        width: 60ch;
+        text-align: center;
+    }
+</style>
