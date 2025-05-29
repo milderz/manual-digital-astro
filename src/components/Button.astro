@@ -1,0 +1,26 @@
+---
+
+const { buttonText, buttonStyle } = Astro.props;
+const primaryStyle = buttonStyle === 'primary' ? 'background-color: var(--primary); color: var(--white-text);' : 'background-color: var(--primary-light); color: var(--primary);';
+
+     
+---
+<button class="cta-button" style={primaryStyle}>{buttonText}</button> 
+<style>
+    .cta-button {
+        padding: 1.7rem 2.7rem;
+        
+        border: none;
+        border-radius: 0.6rem ;
+        cursor: pointer;
+        font-size: 1.5rem;
+        font-weight: 500;
+        filter: drop-shadow(0 20px 60px #4a71ff5f);
+        transition: transform 0.3s ease;
+    }
+
+    .cta-button:hover {
+        transform: scale(1.05);
+        
+    }
+</style>
