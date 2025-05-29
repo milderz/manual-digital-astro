@@ -1,0 +1,52 @@
+---
+const menuItems = [
+    { name: 'Inicio', link: '/' },
+    { name: 'Servicios', link: '/servicios' },
+    { name: 'Contacto', link: '/contacto' },
+];
+
+import Button from './Button.astro';
+---
+
+<header class="header">
+    <h1>🚘</h1>
+    <nav>
+        <ul>
+            {menuItems.map(item => (
+                <li>
+                    <a href={item.link}>{item.name}</a>
+                </li>
+            ))}
+        </ul>
+    </nav>
+    <Button buttonText="Descargar" buttonStyle="primary"/>
+
+<style>
+    .header {
+        display: flex;
+        height: 4.3rem;
+        align-items: center;
+        justify-content: space-between; 
+        margin: 5.9rem 0 7.5rem 0;
+    }
+
+    h1 {
+        
+        font-size: 2rem;
+    }
+
+    nav ul {
+        list-style: none;
+        padding: 0;
+        display: flex;
+        gap: 6.8rem;
+    }
+
+    nav a {
+        text-decoration: none;
+        font-size: 1.6rem;
+        font-weight: 600;
+    }
+
+    
+</style>
