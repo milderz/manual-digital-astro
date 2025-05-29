@@ -1,0 +1,74 @@
+---
+const faqs = [
+    {
+        question: "¿Este resumen reemplaza el manual completo del COSEVI?",
+        answer: "No. Nuestro resumen está basado en el manual oficial, pero simplifica y organiza la información más importante para que estudies de forma más rápida y efectiva.",
+    },
+    {
+        question: "¿Este material es válido para el examen en todo Costa Rica?",
+        answer: "Sí. El contenido está alineado con el manual del conductor oficial utilizado en todo el país, por lo que es útil sin importar en qué provincia vayas a hacer el examen.",
+    },
+    {
+        question: "¿Cómo recibiré el resumen después de comprarlo?",
+        answer: "Recibirás un enlace para descargar el archivo PDF de inmediato en tu correo electrónico, justo después de completar el pago.",
+    },
+    {
+        question: "¿Qué formato tiene el archivo?",
+        answer: "Es un archivo PDF compatible con computadoras, tabletas y teléfonos. Puedes verlo en pantalla o imprimirlo si prefieres estudiar en físico.",
+    },
+    {
+        question: "¿Incluye todas las señales de tránsito?",
+        answer: "Incluye un resumen claro y visual de las señales más importantes que necesitas conocer para el examen teórico.",
+    },
+    {
+        question: "¿Qué pasa si no entiendo alguna parte del contenido?",
+        answer: "El resumen está hecho para ser lo más claro posible. Sin embargo, si tienes dudas específicas, puedes escribirnos y con gusto te orientamos.",
+    },
+    {
+        question: "¿Puedo pagar en colones?",
+        answer: "¡Claro! Puedes pagar en colones (₡6000) o en dólares ($10), según lo que te quede más cómodo.",
+    },
+    {
+        question: "¿Este resumen me garantiza pasar el examen?",
+        answer: "El éxito depende de tu estudio y preparación, pero este resumen te da las herramientas clave para que llegues con confianza y bien preparado.",
+    },
+];
+---
+
+<section>
+    <p class="heading">📘 TODO LO QUE NECESITAS SABER</p>
+    <h3 class="section-title">Preguntas Frecuentes (FAQ)</h3>
+    <div class="faq-list">
+        {
+            faqs.map((faq) => (
+                <details>
+                    <summary>{faq.question}</summary>
+                    <p>{faq.answer}</p>
+                </details>
+            ))
+        }
+    </div>
+</section>
+
+<style>
+    section {
+        margin-top: 10rem;
+        text-align: center;
+    }
+    .heading {
+        font-size: 1.4rem;
+        color: var(--primary);
+        font-weight: 700;
+    }
+    .section-title {
+        font-size: 3.6rem;
+        font-weight: 600;
+        margin-top: 1rem;
+    }
+
+    .faq-list {
+        
+        width: 67.3rem;
+        margin: 10rem auto 0 auto;
+    }
+</style>
