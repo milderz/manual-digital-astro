@@ -1,0 +1,92 @@
+---
+import Button from "./Button.astro";
+---
+
+<section class="hero">
+    <div class="blur-background"></div>
+    <div class="hero-content">
+        <h2 class="title-tag">INVIERTE EN TU INDEPENDENCIA</h2>
+        <h2 class="hero-title">
+            ¡Aprueba el examen teórico de manejo a la primera!
+        </h2>
+        <p class="hero-description">
+            ¿Estás listo para obtener tu licencia de conducir en Costa Rica,
+            pero no sabes por dónde empezar? Nuestro resumen del manual del
+            conductor está diseñado para ahorrarte tiempo y ayudarte a aprobar
+            la prueba de manejo con confianza.
+        </p>
+        <div class="hero-btns">
+            <Button buttonText="Descargar" buttonStyle="primary" />
+            <Button buttonText="Learn More" />
+        </div>
+    </div>
+    <div class="hero-img">
+        <img
+            src="https://res.cloudinary.com/dtu95r8h9/image/upload/e_bgremoval/v1748459507/approval_jnckc3.png"
+            height="400px"
+            alt=""
+            srcset=""
+        />
+    </div>
+</section>
+
+<style>
+
+    .blur-background {
+        position: absolute;
+        width: 80rem;
+        height: 16rem;
+        border: 1px solid red;
+        background: linear-gradient(
+            106.89deg,
+            rgba(192, 132, 252, 0.11) 15.73%,
+            rgba(14, 165, 233, 0.41) 15.74%,
+            rgba(232, 121, 249, 0.26) 56.49%,
+            rgba(79, 70, 229, 0.4) 115.91%
+        );
+        filter: blur(118px);
+    }
+    .hero {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        
+    }
+
+    .hero-content {
+        display: flex;
+        flex-direction: column;
+        gap: 1.9rem;
+    }
+
+    .title-tag {
+        font-size: 1.4rem;
+        color: var(--primary);
+        font-weight: 700;
+    }
+
+    .hero-title {
+        font-size: 3.7rem;
+        font-weight: 500;
+        width: 26ch;
+    }
+
+    .hero-description {
+        font-size: 1.8rem;
+        width: 60ch;
+        color: var(--dark-light-text);
+    }
+
+    .hero-btns {
+        display: flex;
+        gap: 1.5rem;
+    }
+
+    .hero-img {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        filter: drop-shadow(0 20px 60px #4a71ff5f);
+    }
+</style>
