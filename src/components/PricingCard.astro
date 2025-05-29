@@ -1,0 +1,83 @@
+---
+const plan = {
+    name: "Resumen del manual digital",
+    price: "₡6000",
+    features: [
+        "✔ Resumen en PDF del manual oficial",
+        "✔ Lenguaje simple y fácil de entender",
+        "✔ Acceso inmediato al realizar la compra",
+        "✔ Compatible con celular, tablet y computadora",
+        "✔ Diseñado para estudiar rápido y aprobar a la primera",
+        "✔ Incluye consejos clave y ejemplos prácticos",
+        "✔ Ideal si tienes poco tiempo para estudiar"
+    ],
+};
+---
+
+<div class="pricing-card">
+    <h2>{plan.name}</h2>
+    <p class="price">{plan.price}</p>
+    <ul>
+        {plan.features.map((feature) => (
+            <li>{feature}</li>
+        ))}
+    </ul>
+    <button class="cta-button">Descargar ahora</button>
+</div>
+
+<style>
+    .pricing-card {
+        margin: 10rem auto 0 auto;
+        border-radius: 0.6rem;
+        background-color: var(--primary);
+        width: 42rem;
+        color: var(--white-text);
+        text-align: left;
+        padding: 2rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 1.8rem;
+    }
+    .pricing-card h2 {
+        color: var(--white-text);
+        font-size: 2.4rem;
+    }
+    .pricing-card .price {
+        font-size: 3.6rem;
+        
+    }
+
+    .pricing-card .price span {
+        font-size: 1.4rem;
+        
+    }
+
+    .pricing-card ul {
+        list-style: circle;
+        display: flex;
+        flex-direction: column;
+        gap: 1.6rem;
+        padding-left: 1.6rem;
+    }
+    .pricing-card li {
+        font-size: 1.6rem;
+        
+    }
+    .cta-button {
+        padding: 1.7rem 2.7rem;
+        width: 100%;
+        border: none;
+        border-radius: 0.6rem ;
+        cursor: pointer;
+        font-size: 1.5rem;
+        font-weight: 500;
+        filter: drop-shadow(0 20px 60px #4a71ff5f);
+        transition: transform 0.3s ease;
+    }
+
+    .cta-button:hover {
+        transform: scale(1.05);
+    }
+</style>
