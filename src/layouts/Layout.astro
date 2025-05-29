@@ -1,3 +1,7 @@
+---
+import '@fontsource-variable/dm-sans';
+---
+
 <!doctype html>
 <html lang="en">
 	<head>
@@ -5,18 +9,70 @@
 		<meta name="viewport" content="width=device-width" />
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="generator" content={Astro.generator} />
-		<title>Astro Basics</title>
+		<title>Manual Digitial del Conductor</title>
 	</head>
 	<body>
 		<slot />
 	</body>
 </html>
 
-<style>
-	html,
-	body {
+<style is:global>
+	*,
+	*::before,
+	*::after {
 		margin: 0;
-		width: 100%;
-		height: 100%;
+		padding: 0;
+		box-sizing: border-box;
 	}
+
+	:root {
+		--white: #ffffff;
+		--primary: #4A72FF;
+		--primary-light: #E9EEFF;
+		--white-text: #ffffff;
+		--dark-text: #0C1B4C ;
+		--dark-light-text: #677294 ;
+		--light-bg: #EEF2FF;
+
+	}
+	html {
+		font-size: 62.5%;
+	}
+
+	body {
+		font-family: 'DMSans', sans-serif;
+		font-optical-sizing: auto;
+		font-weight: 300;
+		font-style: normal;
+		background-color: var(--light-bg);
+		color: var(--dark-text);
+		
+	}
+
+	h1,
+	h2,
+	h3,
+	h4,
+	h5 {
+		color: var(--dark-text);
+	}
+
+	li {
+		list-style: none;
+	}
+
+	a {
+		text-decoration: none;
+		color: var(--dark-light-text);
+		font-weight: 500;
+	}
+	a:visited {
+		color: var(--dark-text);
+	}
+	p {
+		font-size: 1.8rem;
+		font-weight: 500;
+		line-height: 1.6;
+	}
+	
 </style>
