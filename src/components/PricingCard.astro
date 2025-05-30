@@ -22,7 +22,7 @@ const plan = {
             <li>{feature}</li>
         ))}
     </ul>
-    <button class="cta-button">Descargar ahora</button>
+    <button class="cta-button">Descargar ahora</button
 </div>
 
 <style>
@@ -72,12 +72,13 @@ const plan = {
         border-radius: 0.6rem ;
         cursor: pointer;
         font-size: 1.5rem;
-        font-weight: 500;
-        filter: drop-shadow(0 20px 60px #4a71ff5f);
-        transition: transform 0.3s ease;
+        font-weight: 600;
+        background-color: var(--light-bg); 
+        color: var(--primary);
+        transition: all 0.2s ease;
     }
 
     .cta-button:hover {
-        transform: scale(1.05);
+        background-color: var(--primary-light-hover);
     }
 </style>
