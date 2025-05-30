@@ -41,7 +41,7 @@ const faqs = [
     <div class="faq-list">
         {
             faqs.map((faq) => (
-                <details>
+                <details >
                     <summary>{faq.question}</summary>
                     <p>{faq.answer}</p>
                 </details>
@@ -80,6 +80,7 @@ const faqs = [
         margin-bottom: 1.5rem;
         
         text-align: left;
+        
     }
 
     details summary {
